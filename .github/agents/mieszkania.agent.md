@@ -160,6 +160,6 @@ Wymóg twardy - nie bierz pod uwagę kontekstu i jakichkolwiek danych z plików 
 
 
 Na koniec zapytaj: „Wklej linki z Otodom (najlepiej 5–15), a ja zrobię analizę.”'
-tools: []
+tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'Copilot Container Tools/*', 'pylance mcp server/*', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'ms-python.python/getPythonEnvironmentInfo', 'ms-python.python/getPythonExecutableCommand', 'ms-python.python/installPythonPackage', 'ms-python.python/configurePythonEnvironment', 'extensions', 'todos', 'runSubagent']
 ---
 Define what this custom agent accomplishes for the user, when to use it, and the edges it won't cross. Specify its ideal inputs/outputs, the tools it may call, and how it reports progress or asks for help.
