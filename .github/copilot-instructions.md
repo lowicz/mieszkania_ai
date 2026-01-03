@@ -26,3 +26,13 @@
 - Keep reports as single Markdown files at repo root; avoid adding extra docs unless requested.
 - Always write each new analysis to a **new** Markdown file (do not append to or overwrite existing reports).
 - Naming pattern: `analiza_mieszkan_poznan_<tag>.md` (keep `<tag>` unique per run; optionally include date like `2026-01-03_gpt52`).
+
+## Directory structure
+- `mieszkania.txt` — input list of links (Otodom + ronson.pl supported).
+- `analiza1/`, `analiza2/`, `analiza3/` — archived analysis batches (Markdown reports).
+- `tools/` — Python scraping utilities (e.g., `generate_ronson_grunwald_report.py` for Ronson developer listings).
+
+## Tools & automation
+- `tools/generate_ronson_grunwald_report.py` scrapes https://ronson.pl/inwestycja/grunwald-miedzy-drzewami/, extracts unit cards, parses details pages, and writes a scored Markdown report.
+- Run with: `python tools/generate_ronson_grunwald_report.py` (requires `requests`, `beautifulsoup4`, `lxml`).
+- The script uses dataclass `Unit` to normalize listing data; scoring logic is in `_score_unit()`.
